@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.logo{
+    color: white;
+}
+header {
+    background: #b74747;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #ffffff;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+/* header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: rgb(0, 0, 0);
+} */
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">GAMExPUNK</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">🏠︎ HOME</a>
+                </li>
+                <li>
+                    <a href="posts.html">Posts</a>
+                </li>
+                <li>
+                    <a href="forums.html">Forum</a>
+                </li>
+                <li>
+                    <a href="detail.html">Discuss</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label> -->
+    </header>
+    <!-- <div class="button-container">
+        <button class="btn btn-primary extra-big-btn" onclick="location.href='posts.html'">Posts</button>
+        <button class="btn btn-primary extra-big-btn" onclick="location.href='forums.html'">Forums</button>
+        <button class="btn btn-primary extra-big-btn" onclick="location.href='detail.html'">Detail</button>
+    </div> -->
+    <div class="container">
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="">MyForum - Forums</a> >> <a href="">random subforum</a> >> <a href="">random topic</a></span>
+        </div>
+
+        <!--Topic Section-->
+        <div class="topic-container">
+            <!--Original thread-->
+            <div class="head">
+                <div class="authors">Author</div>
+                <div class="content">Topic: random topic (Read 1325 Times)</div>
+            </div>
+
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">Username</a></div>
+                    <div>Role</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>45</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Just a random content of a random topic.
+                    <br>To see how it looks like.
+                    <br><br>
+                    Nothing more and nothing less.
+                    <br>
+                    <hr>
+                    Regards username
+                    <br>
+                    <div class="comment">
+                        <!-- <button onclick="showComment()" type="submit">Comment</button> -->
+                        <button onclick="showComment()">Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Comment Area-->
+        <!-- <div class="comment-area hide" id="comment-area">
+            <textarea name="comment" id="" placeholder="comment here ... "></textarea>
+            <input type="submit" value="submit">
+        </div> -->
+
+        <!-- temp -->
+        <div class="comment-area hide" id="comment-area">
+            <textarea name="comment" id="comment" placeholder="comment here... "></textarea>
+            <input type="submit" value="submit" id="submit-comment">
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#submit-comment').on('click', function(e) {
+                e.preventDefault(); // prevent the form from submitting normally
+        
+                var comment = $('#comment').val(); // get the comment from the textarea
+        
+                // here you would typically send an AJAX request to your server to save the comment
+                // for example, using jQuery's $.ajax() method
+        
+                // after the comment is saved, you can clear the textarea
+                $('#comment').val('');
+            });
+        });
+        </script>
+        <!-- temp -->
+
+        <!--Comments Section-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">AnotherUser</a></div>
+                    <div>Role</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>455</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Just a comment of the above random topic.
+                    <br>To see how it looks like.
+                    <br><br>
+                    Nothing more and nothing less.
+                    <br>
+                    <br>
+                    <div class="comment">
+                        <button onclick="showReply()" type="submit">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Reply Area -->
+        <!-- <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
+            <input type="submit" value="submit">
+        </div> -->
+        <!--temp-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="reply" placeholder="reply here... "></textarea>
+            <input type="submit" value="submit" id="submit-reply">
+        </div>
+        
+        <script>
+        $(document).ready(function() {
+            $('#submit-reply').on('click', function(e) {
+                e.preventDefault(); // prevent the form from submitting normally
+        
+                var reply = $('#reply').val(); // get the reply from the textarea
+        
+                // here you would typically send an AJAX request to your server to save the reply
+                // for example, using jQuery's $.ajax() method
+        
+                // after the reply is saved, you can clear the textarea
+                $('#reply').val('');
+            });
+        });
+        </script>
+        <!--temp-->
+
+        
+
+
+        <!--Another Comment With replies-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">AnotherUser</a></div>
+                    <div>Role</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>455</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Just a comment of the above random topic.
+                    <br>To see how it looks like.
+                    <br><br>
+                    Nothing more and nothing less.
+                    <br>
+                    <br>
+                    <div class="comment">
+                        <button onclick="showReply()">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reply Area-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
+            <input type="submit" value="submit">
+        </div>
+
+        
+
+    </div>
+    <footer>
+        <span>&copy;  GAMExPUNK | Byte into the future</span>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Done</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+
+    <style>
+        body {
+          text-align: center;
+          padding: 40px 0;
+          background: #EBF0F5;
+        }
+          h1 {
+            color: darkred;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            margin-bottom: 10px;
+          }
+          p {
+            color: #404F5E;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-size:20px;
+            margin: 0;
+          }
+        i {
+          color: red;
+          font-size: 100px;
+          line-height: 200px;
+          margin-left:-15px;
+        }
+        .card {
+          background: white;
+          padding: 60px;
+          border-radius: 4px;
+          box-shadow: 0 2px 3px #C8D0D8;
+          display: inline-block;
+          margin: 0 auto;
+        }
+        #goback{
+            display: none;
+            cursor: pointer;
+            transition: all ease-in 0.3s;
+        }
+        #goback:hover{
+            color: rgba(139, 0, 0, 0.689);
+
+        }
+        .underline {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(139, 0, 0, 0.689);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+      </style>
+</head>
+<body onload="makevisible()">
+    <div class="card">
+        <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+          <i class="checkmark">✓</i>
+        </div>
+          <h1 id="ongoing">Hold for a second</h1> 
+          <p>We are working on your request <br>Soon your payment would be confirmed.</p>
+          <h1 id="goback" onclick="goback()" class="underline">Go back to Store</h1>
+        </div>
+        <script>
+            function makevisible(){
+                setTimeout(() => {                    
+                    document.getElementById("goback").style.display = "block";
+                    document.getElementById("ongoing").innerHTML = "Success";
+                    document.getElementsByTagName("p")[0].innerHTML = "We received your purchase request;<br/> we'll be in touch shortly!";
+
+
+                    
+                }, 2000);
+            }
+            function goback(){
+                window.location.href = "./store.html";
+                }
+        </script>
+</body>
+</html>

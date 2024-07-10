@@ -1,0 +1,83 @@
+*{
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+}
+.container
+{
+background-color:#1e0b0f;
+background-repeat: no-repeat;
+background-attachment: fixed;
+height:100%;
+width:100%;
+}
+
+#container1{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#container2{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.trailer{
+    /* border:1px solid white; */
+    height:35vw;
+    width:25vw;
+}
+
+.pictures{
+    height:30vw;
+    width:25vw;
+    transition: all ease-in 0.3s;
+}
+
+.pictures:hover{
+    transform: scale(1.06);
+}
+
+.trailerbutton{
+    background-color: red;
+    color:white;
+    height:3vw;
+    width:9vw;
+    border-radius: 10px;
+    margin-left: 28%;
+    margin-top: 5%;
+    transition: all ease-in 0.5s;
+}
+
+.trailerbutton:hover{
+    transform: scale(1.1);
+}
+
+.exploregames{
+    color:red;
+    font-size: 45px;
+    text-align: center;
+    transition: all ease-in 0.5s;
+}
+.exploregames:hover{
+    transform: scale(1.1);
+    text-decoration: overline;
+}
+
+.watchtrailers{
+    color:red;
+    font-size: 45px;
+    text-align: center;
+    transition: all ease-in 0.5s;
+}
+.watchtrailers:hover{
+    transform: scale(0.9);
+    text-decoration: overline;
+}
+
+.trailervideos{
+    height:40vw;
+    width:80vw;
+    margin-left:10%;
+    border:1px solid white;
+}

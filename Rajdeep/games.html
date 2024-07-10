@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+       
+  
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+FR+Moderne:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+    * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #1E0B0F !important;
+        
+    }
+/* .logo{
+    color: white;
+} */
+header {
+    background: #b74747;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+/* header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+} */
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #ffffff;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: rgb(0, 0, 0);
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
+    .explore-games-text{
+         transition: all ease-in 1s;
+    }
+    .explore-games-text:hover{
+        transform: scale(1.1);
+        text-decoration: overline; 
+
+    }
+    .hero-img img{
+  transition: all ease-in 0.5s;
+}
+    .card{
+  transition: all ease-in 0.5s;
+}
+.hero-img img:hover{
+  transform: scale(1.1);
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
+}
+    .hero-img img:hover{
+        transform: scale(1.1);
+    }
+    .game-information{
+        background-image: url(./images/4.jpeg);
+        width: 80%;
+        margin: 0% 10%;
+    }
+    .game-information h1{
+        color: red;
+        text-align: center;
+        font-size: larger;
+    }
+    .game-information p{
+        color: white;
+        font-size: larger;
+    }
+    body {
+    background: black;
+    font-family: 'Jost';
+  }
+  .card {
+  border: none;
+  border-radius: 13px;
+  background-color: black;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-image: linear-gradient(to right, darkred, #ff9999);
+  border-image-slice: 1;
+}
+  .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1E0B0F;
+}
+
+.logo {
+  width: 160px;
+  height: 80px;
+}
+
+.btn-primary {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: darkred;
+}
+.main-heading {
+  text-align: center;
+  color: white;
+  background-color: red;
+  width: 80%;
+  margin: 0 auto;
+  border: 12px solid;
+  border-radius: 40px;
+  border-image: linear-gradient(to right, darkred, #ff9999);
+  font-size: 50px;
+  font-family: 'Jost';
+  transition: all ease-in 0.5s;
+}
+.main-heading:hover{
+    background-color: darkred;
+    box-shadow: 8px 8px 16px red;
+}
+
+</style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="./images/logo1.png" alt="Logo" class="logo" style="height: 70px; width: 250px;">
+    <a href="./../index.html" class="btn btn-primary">🏠︎ HOME</a>
+  </div>
+  <h1 class="main-heading">! TRENDING GAMES AND INFO !</h1>
+
+
+<!--    
+  <header>
+    <div class="container clearfix">
+       <h1 class="logo"><a class="anch" href="#">LOGO</a></h1>
+      <nav class="main-nav">
+        <div>
+        <ul>
+          <li class="listy"><a href="/index.html">Home</a></li>
+          <li><a href="/Rajdeep/index.html">Games</a></li>
+          <li><a href="/Rajdeep/esoprts.html">Tournaments</a></li>
+          <li><a href="/aman/videospage.html">Latest Games</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header> -->
+  <!-- <header>
+    <div class="logo">GAMExPUNK</div>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+        <ul>
+            <li>
+                <a href="./riddhi/index.html" class="active">Home</a>
+            </li>
+             <li>
+                <a href=""></a>
+            </li>
+            <li>
+                <a href="">Blog</a>
+            </li>
+            <li>
+                <a href="">Services</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+        </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+</header> -->
+      
+    <br><br><br>
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" style="margin-left: 15px;">
+        <div class="col-10 col-sm-8 col-lg-6 hero-img">
+          <img src="./images/10.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3" style="color: red; padding-left: 5px;">GAME ON CYBER-PUNKERS</h1>
+          <p class="lead text-white"  padding-left: 5px;>Connect with like-minded gamers from around the world, participate in online tournaments, and showcase your skills. Our platform offers a wide variety of games, from classic favorites to the latest releases, ensuring that there's something for everyone. Plus, our state-of-the-art gaming facilities and cutting-edge technology provide an unparalleled gaming experience. So why wait? Join us now and take your gaming to the next level! </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+           <a href="#explore-games-section"> <button type="button" class="btn btn-outline-secondary btn-lg px-4" style="color: red; border-color: red;">EXPLORE NOW</button></a>
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="row flex-lg-row align-items-center g-5 py-5" style="margin-left: 15px;">
+        <div class="col-10 col-sm-8 col-lg-6 hero-img order-lg-2">
+            <img src="./images/9.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <h1 class="display-5 fw-bold lh-1 mb-3" style="color: red; padding-left: 5px;">SHOW YOUR SKILLS</h1>
+            <p class="lead text-white">Experience gaming and virtual reality like never before at GameXR! Located in Mirpur, C, GameXR offers the best in immersive gaming and virtual reality experiences. Choose from dozens of exciting games and experiences, or come up with your own! There is something for everyone at GameXR!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4" style="color: red; border-color: red;">GEAR UP</button> 
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="card" style="background-color: #1E0B0F;">
+        <img src="./images/1.jpeg" class="card-img-top" alt="..." style="width: 80%; height: 400px; margin: 0% 10%;">
+        <a href="" style="text-decoration: none;"><div class="card-body">
+          <h5 class="card-title" style="width: 80%; margin: 0% 10%; color: white;">ONGOING</h5>
+          <p class="card-text" style="width: 80%; margin: 0% 10%; color: red;"></p>
+          <p class="card-text"  style="width: 80%; margin: 0% 10%; color: white;">Last updated 3 mins ago</p>
+        </div></a>
+    </div>
+      <div class="card"  style="background-color: #1E0B0F;">
+        <img src="./images/3.jpeg" class="card-img-bottom" alt="..." style="width: 80%; height: 400px; margin: 0% 10%;">
+        <a href="" style="text-decoration: none;"><div class="card-body">
+          <h5 class="card-title" style="width: 80%; margin: 0% 10%; color: white;">ONGOING</h5>
+          <p class="card-text" style="width: 80%; margin: 0% 10%; color: red;">Are you also among them who thinks that no one can beet me,then come join the party , where people are reday to prove you wrong.</p>
+          <p class="card-text" style="width: 80%; margin: 0% 10%; color: white;">Last updated 3 mins ago</p>
+        </div></a>
+        
+      </div>
+    </div> -->
+    <br><br><br>
+    <h1 class="explore-games-text" style="color: red; text-align: center; padding-bottom: 2px; transition: all ease-in 0.5s;" id="explore-games-section"><span>EXPLORE GAMES</span></h1>
+    <div class="album py-5 bg-body-tertiary bg-dark" style="background-color: #1E0B0F !important; width: 100%;">
+      <div class="container" style="background-color: #1E0B0F;">
+  
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+          <div class="col">
+              <div class="card shadow-sm" style="background-color: black;">
+                  <img src="./images/cyberpunk2077-image.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <div class="card-body">
+                      <p class="card-text" style="color: white;"><b style="color: red;">Cyberpunk 2077 : </b> <br> "Cyberpunk 2077" thrusts players into the neon-soaked streets of Night City, a sprawling metropolis teeming with danger and opportunity.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                           <a href="cyberpunk2077.html"><button type="button" class="btn btn-sm btn-outline-secondary" style="color: white; background-color: red; border-color: red;">View</button></a> 
+                          </div>
+                          <small style="color: white;">9 mins</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card shadow-sm" style="background-color: black;">
+                  <img src="images/overwatch-image.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <div class="card-body">
+                      <p class="card-text" style="color: white;"> <b style="color: red;">Overwatch : </b> <br>"Overwatch" immerses players in a vibrant, futuristic world where heroes from diverse backgrounds and abilities clash </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                           <a href="overwatch.html"><button type="button" class="btn btn-sm btn-outline-secondary" style="color: white; background-color: red; border-color: red;">View</button></a> 
+                  
+                          </div>
+                          <small style="color: white;">9 mins</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card shadow-sm" style="background-color: black;">
+                  <img src="./images/ghostrunner-image.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <div class="card-body">
+                      <p class="card-text" style="color: white;">  <b style="color: red;">GhostRunner : </b> <br>"Ghostrunner" transports players to a dystopian cyberpunk future where they assume the role of a cybernetic ninja on a mission for revenge. </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                           <a href="ghostrunner.html"> <button type="button" class="btn btn-sm btn-outline-secondary" style="color: white; background-color: red; border-color: red;">View</button></a>
+                            
+                          </div>
+                          <small style="color: white;">9 mins</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class="col">
+            <div class="card shadow-sm" style="background-color: black;">
+                <img src="./images/deus-ex-image.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                    <p class="card-text" style="color: white;"><b style="color: red;">Deus Ex : </b> <br>"Deus Ex" immerses players in a near-future world where advanced technology intersects with deep conspiracies and moral dilemmas.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                           <a href="deus-ex.html"> <button type="button" class="btn btn-sm btn-outline-secondary" style="color: white; background-color: red; border-color: red;">View</button></a>
+                        
+                        </div>
+                        <small style="color: white;">9 mins</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm" style="background-color: black;">
+                <img src="images/cloudpunk-image.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                    <p class="card-text" style="color: white;"> <b style="color: red;">Cloudpunk : </b> <br>"Cloudpunk" plunges players into a neon-drenched cyberpunk cityscape, where they take on the role of a delivery driver navigating the bustling streets </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                         <a href="cloudpunk.html"> <button type="button" class="btn btn-sm btn-outline-secondary" style="color: white; background-color: red; border-color: red;">View</button></a>
+                          
+                        </div>
+                        <small style="color: white;">9 mins</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm" style="background-color: black;">
+                <img src="./images/turbo-overkill-image.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                    <p class="card-text" style="color: white;">  <b style="color: red;">Turbo Overkill : </b> <br>"Turbo Overkill" catapults players into a high-octane cyberpunk world where they become a cybernetically enhanced mercenary on a relentless rampage  </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                         <a href="turbo-overkill.html"> <button type="button" class="btn btn-sm btn-outline-secondary" style="color: white; background-color: red; border-color: red;">View</button></a>
+                      
+                        </div>
+                        <small style="color: white;">9 mins</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+  
+      </div>
+  </div>
+  
+  
+  
+    <!-- <div class="game-information">
+        <h1>GAME INFORMATION</h1>
+        <p>The "Cyberpunk" game series, encompassing both the tabletop RPG and the video game "Cyberpunk 2077," immerses players in a dystopian future characterized by cybernetics, corporate dominance, and societal unrest. Originating from the tabletop RPG created by Mike Pondsmith, the series explores themes of rebellion, identity, and the consequences of technological advancement. "Cyberpunk 2077," developed by CD Projekt Red, thrusts players into the neon-lit streets of Night City, where they assume the role of V, a mercenary navigating a web of intrigue while grappling with their own humanity. With its expansive open world, rich narrative, and diverse cast of characters, the series captivates players with its blend of immersive storytelling and adrenaline-fueled action. Despite initial technical challenges, ongoing updates and support from the developers promise to enhance the player experience and further expand the vibrant world of "Cyberpunk."</p>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

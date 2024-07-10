@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVERWATCH</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+FR+Moderne:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    color: white;
+    background-color: #1E0B0F !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Jost';
+}
+       
+        .main-heading{
+            font-size: 100px;
+            text-align: center;
+            transition: all ease-in 0.5s;
+            color: red;
+        }
+        
+        .main-heading:hover{
+            transform: scale(0.9);
+            text-decoration: overline;
+        }
+        
+        /* Style for each section */
+        .section-box {
+            background-color: #2C1A24;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Style for each section title */
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: red;
+        }
+
+        /* Style for each list item */
+        .section-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        /* Style for each list item bullet */
+        .section-list li:before {
+            content: "\2022"; /* Bullet character */
+            color: #F8BB86;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .container{
+            transition: all ease-in 0.5s;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container img{
+            margin-left: 5%;
+        }
+        .container:hover{
+            transform: scale(0.8);
+        }
+        .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1E0B0F;
+}
+
+.logo {
+  width: 160px;
+  height: 80px;
+}
+
+.btn-primary {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: darkred;
+}
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="./images/logo1.png" alt="Logo" class="logo" style="height: 70px; width: 250px;">
+        <a href="./../index.html" class="btn btn-primary">🏠︎ HOME</a>
+      </div>
+    <div class="container"><img src="./images/overwatch-image.jpg" alt="" width="90%" height="80%"></div>
+    <h1 class="main-heading">OVERWATCH</h1>
+    <br>
+    
+    <!-- Background and Origins Section -->
+    <div class="section-box">
+        <h2 class="section-title">Background and Origins:</h2>
+        <ul class="section-list">
+            <li>Developed by Blizzard Entertainment and released in 2016.</li>
+            <li>Set in a futuristic Earth where heroes from diverse backgrounds fight for peace.</li>
+        </ul>
+    </div>
+    
+    <!-- Game Setting Section -->
+    <div class="section-box">
+        <h2 class="section-title">Game Setting:</h2>
+        <ul class="section-list">
+            <li>Features a variety of maps and locations around the world.</li>
+            <li>Combines elements of science fiction and fantasy in its art style and storytelling.</li>
+        </ul>
+    </div>
+    
+    <!-- Gameplay Mechanics Section -->
+    <div class="section-box">
+        <h2 class="section-title">Gameplay Mechanics:</h2>
+        <ul class="section-list">
+            <li>Team-based first-person shooter with a focus on cooperative gameplay.</li>
+            <li>Players choose from a diverse roster of heroes, each with unique abilities and playstyles.</li>
+            <li>Objective-based game modes emphasize teamwork and strategy.</li>
+        </ul>
+    </div>
+    
+    <!-- Characters Section -->
+    <div class="section-box">
+        <h2 class="section-title">Characters:</h2>
+        <ul class="section-list">
+            <li>Over 30 playable heroes, each with their own backstory and personality.</li>
+            <li>Includes iconic characters like Tracer, Reaper, and Winston.</li>
+            <li>Constantly updated with new heroes and balance changes.</li>
+        </ul>
+    </div>
+    
+    <!-- Recent Updates and News Section -->
+    <div class="section-box">
+        <h2 class="section-title">Recent Updates and News:</h2>
+        <ul class="section-list">
+            <li>Regular balance updates and patches to improve gameplay and address community feedback.</li>
+            <li>Seasonal events with new skins, game modes, and cosmetics.</li>
+            <li>Plans for Overwatch 2 announced, featuring new maps, heroes, and game modes.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
